@@ -49,6 +49,7 @@ export default function NieuwVerzoekPage() {
         betrokkene_email: form.betrokkene_email || null,
         betrokkene_bsn_partial: form.betrokkene_bsn_partial || null,
         ontvangen_op: form.ontvangen_op,
+        deadline: new Date(new Date(form.ontvangen_op).getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(),
         systemen_gecontroleerd: systemen,
         notities: form.notities || null,
         status: 'nieuw',
